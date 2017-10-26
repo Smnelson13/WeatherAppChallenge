@@ -29,6 +29,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    view.backgroundColor = customBlue
     apiController = APIController(delegate: self)
     loadCurrentLocation()
   }

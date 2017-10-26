@@ -18,7 +18,11 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   
   func didRecieveResults(_ results: [String : Any])
   {
-    //Do something
+    let currentWeather = Weather(weatherDictionary: results)
+    let dispatchQueue = DispatchQueue.main
+    dispatchQueue.async {
+      self.temperatureLabel.text = "\(currentWeather.temperature.rounded())℉"
+    }
   }
   
 

@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, APIControllerDelegate
+class ViewController: UIViewController, APIControllerDelegate, CLLocationManagerDelegate
 {
   var apiController: APIControllerDelegate!
   let locationManager = CLLocationManager()
@@ -23,13 +23,13 @@ class ViewController: UIViewController, APIControllerDelegate
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
+    apiController = APIController(delegate: self) as! APIControllerDelegate
+    loadCurrentLocation()
   }
 
   override func didReceiveMemoryWarning()
   {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
 
   
@@ -64,9 +64,7 @@ class ViewController: UIViewController, APIControllerDelegate
     locationManager.stopUpdatingLocation()
     if let location = locations.last
     {
-      //  apiController.searchDarkSky(for: location.coordinate)
-      apiController.searchDarkSky(coordinate: location.coordinate)
-      apiController.forecastRequest(coordinate: location.coordinate)
+      
     }
   }
   

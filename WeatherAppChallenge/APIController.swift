@@ -24,7 +24,7 @@ class APIController
     self.delegate = delegate
   }
   
-  func searchDarkSky(coordinate: CLLocationCoordinate2D)
+  func getWeatherDat(coordinate: CLLocationCoordinate2D)
   {
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
     let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=Westervile,oh,us&APPID=\(APIKey)")!

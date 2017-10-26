@@ -11,7 +11,9 @@ import CoreLocation
 
 class ViewController: UIViewController, APIControllerDelegate, CLLocationManagerDelegate
 {
-  var apiController: APIControllerDelegate!
+  @IBOutlet weak var temperatureLabel: UILabel!
+  
+  var apiController: APIController!
   let locationManager = CLLocationManager()
   
   func didRecieveResults(_ results: [String : Any])
@@ -23,7 +25,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    apiController = APIController(delegate: self) as! APIControllerDelegate
+    apiController = APIController(delegate: self)
     loadCurrentLocation()
   }
 
@@ -64,7 +66,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
     locationManager.stopUpdatingLocation()
     if let location = locations.last
     {
-      
+      apiController.searchDarkSky(coordinate: location.coordinate)
     }
   }
   

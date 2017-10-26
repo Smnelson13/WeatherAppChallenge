@@ -10,12 +10,12 @@ import Foundation
 import CoreLocation
 import UIKit
 
-protocol APIControllerDelegate
+protocol APIControllerDelegate: class 
 {
   func didRecieveResults(_ results: [String: Any])
 }
 
-class APIController
+public class APIController
 {
   var delegate: APIControllerDelegate
   
@@ -23,11 +23,11 @@ class APIController
   {
     self.delegate = delegate
   }
-  
-  func getWeatherDat(coordinate: CLLocationCoordinate2D)
+
+  func searchDarkSky(coordinate: CLLocationCoordinate2D)
   {
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=Westervile,oh,us&APPID=\(APIKey)")!
+    let url = URL(string: "https://api.darksky.net/forecast/\(darkSkyAPIKey)/\(coordinate.latitude),\(coordinate.longitude)")!
     let session = URLSession.shared
     
     let task = session.dataTask(with: url, completionHandler: { data, response, error -> Void in
@@ -44,6 +44,7 @@ class APIController
           if let results = dictionary["currently"] as? [String: Any]
           {
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            //self.delegate?.didRecieveDarkSky(results) // Multiple way
             self.delegate.didRecieveResults(results)
           }
         }
@@ -52,7 +53,12 @@ class APIController
     
     task.resume()
   }
+  
 
+  func testDelegate()
+  {
+    
+  }
   
   
   func parseJSON(_ data: Data) -> [String: Any]?
@@ -78,3 +84,34 @@ class APIController
   
   
 }
+
+
+/* //http://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b1b15e88fa797225412429c1c50c122a1
+ func getWeatherData(coordinate: CLLocationCoordinate2D)
+ {
+ UIApplication.shared.isNetworkActivityIndicatorVisible = true
+ let url = URL(string: "http://samples.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=\(APIKey)")!
+ let session = URLSession.shared
+ 
+ let task = session.dataTask(with: url, completionHandler: { data, response, error -> Void in
+ 
+ print("Task completed")
+ if let error = error
+ {
+ print(error.localizedDescription)
+ }
+ else
+ {
+ if let dictionary = self.parseJSON(data!)
+ {
+ if let results = dictionary["currently"] as? [String: Any]
+ {
+ UIApplication.shared.isNetworkActivityIndicatorVisible = false
+ self.delegate.didRecieveResults(results)
+ }
+ }
+ }
+ })
+ 
+ task.resume()
+ }*/

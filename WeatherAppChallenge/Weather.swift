@@ -12,7 +12,7 @@ import Foundation
 class Weather
 {
   
-  
+  let precipProbability: Double
   let temperature: Double
   let humidity: Double
   let apparentTemperature: Double
@@ -23,6 +23,7 @@ class Weather
   
   init(weatherDictionary: [String: Any])
   {
+    precipProbability = weatherDictionary["precipProbability"] as! Double
     temperature = weatherDictionary["temperature"] as! Double
     humidity = weatherDictionary["humidity"] as! Double
     apparentTemperature = weatherDictionary["apparentTemperature"] as! Double

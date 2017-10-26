@@ -13,6 +13,9 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
 {
   @IBOutlet weak var temperatureLabel: UILabel!
   @IBOutlet weak var skyconView: SKYIconView!
+  @IBOutlet weak var summaryLabel: UILabel!
+  @IBOutlet weak var windSpeedLabel: UILabel!
+  @IBOutlet weak var chanceOfRainLabel: UILabel!
   
   var apiController: APIController!
   let locationManager = CLLocationManager()
@@ -24,6 +27,9 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
     dispatchQueue.async {
       self.temperatureLabel.text = "\(currentWeather.temperature.rounded())℉"
       self.skyconView.setType = Skycons(rawValue: currentWeather.icon)!
+      self.summaryLabel.text = currentWeather.summary
+      self.windSpeedLabel.text = "\(currentWeather.windSpeed)MPH"
+      self.chanceOfRainLabel.text = "\(currentWeather.precipProbability)%"
     }
   }
   

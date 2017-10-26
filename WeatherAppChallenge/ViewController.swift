@@ -12,6 +12,7 @@ import CoreLocation
 class ViewController: UIViewController, APIControllerDelegate, CLLocationManagerDelegate
 {
   @IBOutlet weak var temperatureLabel: UILabel!
+  @IBOutlet weak var skyconView: SKYIconView!
   
   var apiController: APIController!
   let locationManager = CLLocationManager()
@@ -22,6 +23,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
     let dispatchQueue = DispatchQueue.main
     dispatchQueue.async {
       self.temperatureLabel.text = "\(currentWeather.temperature.rounded())℉"
+      self.skyconView.setType = Skycons(rawValue: currentWeather.icon)!
     }
   }
   
@@ -29,6 +31,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    skyconView.setColor = UIColor.white
     view.backgroundColor = customBlue
     apiController = APIController(delegate: self)
     loadCurrentLocation()

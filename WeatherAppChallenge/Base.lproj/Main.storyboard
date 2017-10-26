@@ -23,22 +23,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm1-zh-bbw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm1-zh-bbw">
                                 <rect key="frame" x="157" y="325" width="61" height="57"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-kq-Qp4" customClass="SKYIconView" customModule="WeatherAppChallenge" customModuleProvider="target">
-                                <rect key="frame" x="87" y="120" width="200" height="200"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-kq-Qp4" customClass="SKYIconView" customModule="WeatherAppChallenge" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="M1M-yp-mOZ"/>
                                     <constraint firstAttribute="width" secondItem="6Mn-kq-Qp4" secondAttribute="height" multiplier="1:1" id="Nbr-Mz-4t6"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-bF-D2J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-bF-D2J">
                                 <rect key="frame" x="140" y="86" width="95" height="29"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
@@ -47,31 +47,39 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chance of rain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0x-Dr-Kah">
                                 <rect key="frame" x="15" y="462" width="172.5" height="29"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9W-kd-ZKY">
                                 <rect key="frame" x="187.5" y="462" width="172.5" height="29"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MPH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ta-N5-J7L">
                                 <rect key="frame" x="248.5" y="501" width="50.5" height="29"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REw-wh-Y7L">
                                 <rect key="frame" x="86.5" y="501" width="29.5" height="29"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvf-RH-6Y4">
-                                <rect key="frame" x="325" y="45" width="25" height="25"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="162.5" y="567" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="QbN-hB-dZz"/>
+                                    <constraint firstAttribute="width" secondItem="yvf-RH-6Y4" secondAttribute="height" multiplier="1:1" id="zoU-XF-ka5"/>
+                                </constraints>
                                 <state key="normal" image="Search"/>
                                 <connections>
                                     <segue destination="LN7-Ld-Djx" kind="presentation" identifier="SearchSegue" id="cKr-Gt-BT7"/>
@@ -88,15 +96,15 @@
                             <constraint firstItem="Qm1-zh-bbw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MF4-7Z-IVC"/>
                             <constraint firstItem="1UH-bF-D2J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ngx-pi-BzG"/>
                             <constraint firstItem="REw-wh-Y7L" firstAttribute="centerX" secondItem="Z0x-Dr-Kah" secondAttribute="centerX" id="QE6-iv-Puo"/>
-                            <constraint firstItem="yvf-RH-6Y4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Sp9-2s-atB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yvf-RH-6Y4" secondAttribute="bottom" constant="50" id="R8W-Wu-K7o"/>
                             <constraint firstItem="u9W-kd-ZKY" firstAttribute="width" secondItem="Z0x-Dr-Kah" secondAttribute="width" id="VD5-34-3pX"/>
                             <constraint firstItem="u9W-kd-ZKY" firstAttribute="leading" secondItem="Z0x-Dr-Kah" secondAttribute="trailing" id="efb-zW-f48"/>
                             <constraint firstItem="Qm1-zh-bbw" firstAttribute="top" secondItem="6Mn-kq-Qp4" secondAttribute="bottom" constant="5" id="fy9-31-lVP"/>
                             <constraint firstItem="6Mn-kq-Qp4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nd8-95-85a"/>
                             <constraint firstItem="4Ta-N5-J7L" firstAttribute="centerX" secondItem="u9W-kd-ZKY" secondAttribute="centerX" id="pNP-Xn-Q3h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u9W-kd-ZKY" secondAttribute="trailing" constant="15" id="qBY-Uc-DjQ"/>
-                            <constraint firstItem="6Mn-kq-Qp4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rAG-oW-jPo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yvf-RH-6Y4" secondAttribute="trailing" constant="25" id="ti7-6r-W1m"/>
+                            <constraint firstItem="6Mn-kq-Qp4" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="rAG-oW-jPo"/>
+                            <constraint firstItem="yvf-RH-6Y4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x8G-qH-cC7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4Ta-N5-J7L" secondAttribute="bottom" constant="137" id="ztR-CU-s6l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -123,33 +131,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dG-ii-EPK">
-                                <rect key="frame" x="320" y="45" width="30" height="48"/>
+                                <rect key="frame" x="125" y="141" width="125" height="48"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <state key="normal" title="X">
+                                <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="xButton:" destination="LN7-Ld-Djx" eventType="touchUpInside" id="fF7-ed-9QB"/>
                                 </connections>
                             </button>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1Ml-he-sof">
-                                <rect key="frame" x="5" y="45" width="310" height="56"/>
+                            <searchBar contentMode="redraw" placeholder="Zipcode / City" translatesAutoresizingMaskIntoConstraints="NO" id="1Ml-he-sof">
+                                <rect key="frame" x="0.0" y="35" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredby-oneline.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kyt-ck-GHG">
+                                <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="zoG-rs-M24"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1dG-ii-EPK" firstAttribute="leading" secondItem="1Ml-he-sof" secondAttribute="trailing" constant="5" id="1rZ-Mz-KbR"/>
-                            <constraint firstItem="1dG-ii-EPK" firstAttribute="top" secondItem="iI9-D6-xAS" secondAttribute="top" constant="25" id="JMH-e4-vOK"/>
-                            <constraint firstItem="iI9-D6-xAS" firstAttribute="trailing" secondItem="1dG-ii-EPK" secondAttribute="trailing" constant="25" id="WOA-ic-3Jb"/>
-                            <constraint firstItem="1Ml-he-sof" firstAttribute="leading" secondItem="iI9-D6-xAS" secondAttribute="leading" constant="5" id="hEC-Sy-xAa"/>
-                            <constraint firstItem="1Ml-he-sof" firstAttribute="top" secondItem="iI9-D6-xAS" secondAttribute="top" constant="25" id="syA-gM-YOI"/>
+                            <constraint firstItem="1Ml-he-sof" firstAttribute="leading" secondItem="iI9-D6-xAS" secondAttribute="leading" id="0AB-zc-hGQ"/>
+                            <constraint firstItem="Kyt-ck-GHG" firstAttribute="trailing" secondItem="iI9-D6-xAS" secondAttribute="trailing" id="AZV-Kq-RG3"/>
+                            <constraint firstItem="1dG-ii-EPK" firstAttribute="top" secondItem="1Ml-he-sof" secondAttribute="bottom" constant="50" id="GBj-be-9qs"/>
+                            <constraint firstItem="1Ml-he-sof" firstAttribute="top" secondItem="iI9-D6-xAS" secondAttribute="top" constant="15" id="N7d-Hu-fdz"/>
+                            <constraint firstItem="Kyt-ck-GHG" firstAttribute="trailing" secondItem="iI9-D6-xAS" secondAttribute="trailing" id="OUs-8a-vC8"/>
+                            <constraint firstItem="Kyt-ck-GHG" firstAttribute="leading" secondItem="iI9-D6-xAS" secondAttribute="leading" id="TPE-OX-E5k"/>
+                            <constraint firstItem="1dG-ii-EPK" firstAttribute="centerX" secondItem="kyz-LU-XyU" secondAttribute="centerX" id="U9b-fl-kjx"/>
+                            <constraint firstItem="1dG-ii-EPK" firstAttribute="leading" secondItem="iI9-D6-xAS" secondAttribute="leading" constant="125" id="hw7-Sy-SuS"/>
+                            <constraint firstItem="Kyt-ck-GHG" firstAttribute="bottom" secondItem="iI9-D6-xAS" secondAttribute="bottom" id="l0o-0u-7Qe"/>
+                            <constraint firstItem="Kyt-ck-GHG" firstAttribute="bottom" secondItem="iI9-D6-xAS" secondAttribute="bottom" id="tTE-9z-8Wu"/>
+                            <constraint firstItem="Kyt-ck-GHG" firstAttribute="leading" secondItem="iI9-D6-xAS" secondAttribute="leading" id="uHt-Ys-vjC"/>
+                            <constraint firstItem="iI9-D6-xAS" firstAttribute="trailing" secondItem="1Ml-he-sof" secondAttribute="trailing" id="uda-jn-baD"/>
+                            <constraint firstItem="iI9-D6-xAS" firstAttribute="trailing" secondItem="1dG-ii-EPK" secondAttribute="trailing" constant="125" id="y6L-cS-qf7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iI9-D6-xAS"/>
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="1dG-ii-EPK" id="ANv-87-x5h"/>
+                        <outlet property="poweredByImage" destination="Kyt-ck-GHG" id="4X4-CC-vDl"/>
                         <outlet property="searchBar" destination="1Ml-he-sof" id="3iH-de-fmB"/>
                     </connections>
                 </viewController>
@@ -160,5 +183,6 @@
     </scenes>
     <resources>
         <image name="Search" width="25" height="25"/>
+        <image name="poweredby-oneline.png" width="3350" height="759"/>
     </resources>
 </document>

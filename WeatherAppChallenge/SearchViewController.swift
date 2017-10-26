@@ -16,6 +16,7 @@ protocol SearchViewControllerDelegate
 
 class SearchViewController: UIViewController, UISearchBarDelegate
 {
+  @IBOutlet weak var poweredByImage: UIImageView!
   var delegate: SearchViewControllerDelegate!
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var doneButton: UIButton!
@@ -29,7 +30,12 @@ class SearchViewController: UIViewController, UISearchBarDelegate
       view.backgroundColor = customBlue
       searchBar.delegate = self
       searchBar.showsCancelButton = true
-      
+      searchBar.barTintColor = customBlue
+      doneButton.setTitleColor(customBlue, for: .normal)
+      doneButton.backgroundColor = UIColor.white
+      doneButton.layer.cornerRadius = 20
+      poweredByImage.image = poweredByImage.image!.withRenderingMode(.alwaysTemplate)
+      poweredByImage.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning()
@@ -41,6 +47,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate
   func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
   {
     searchBar.showsCancelButton = true
+    
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar)

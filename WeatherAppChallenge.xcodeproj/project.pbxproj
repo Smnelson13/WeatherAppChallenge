@@ -20,6 +20,7 @@
 		90BA2B871FA2590900A7CF56 /* SKYIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B861FA2590900A7CF56 /* SKYIconView.swift */; };
 		90BA2B8A1FA2641C00A7CF56 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B891FA2641C00A7CF56 /* SearchViewController.swift */; };
 		90BA2B8C1FA2652400A7CF56 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B8B1FA2652400A7CF56 /* CircularTransition.swift */; };
+		90BA2B8E1FA2768200A7CF56 /* poweredby-oneline.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BA2B8D1FA2768200A7CF56 /* poweredby-oneline.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		90BA2B861FA2590900A7CF56 /* SKYIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKYIconView.swift; sourceTree = "<group>"; };
 		90BA2B891FA2641C00A7CF56 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		90BA2B8B1FA2652400A7CF56 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		90BA2B8D1FA2768200A7CF56 /* poweredby-oneline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredby-oneline.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				9087D3951FA246BF00425A55 /* APIController.swift */,
 				90BA2B881FA2592900A7CF56 /* SupportingFiles */,
 				9087D36E1FA2460C00425A55 /* Assets.xcassets */,
+				90BA2B8D1FA2768200A7CF56 /* poweredby-oneline.png */,
 				9087D3701FA2460C00425A55 /* LaunchScreen.storyboard */,
 				9087D3731FA2460C00425A55 /* Info.plist */,
 			);
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BA2B8E1FA2768200A7CF56 /* poweredby-oneline.png in Resources */,
 				9087D3721FA2460C00425A55 /* LaunchScreen.storyboard in Resources */,
 				9087D36F1FA2460C00425A55 /* Assets.xcassets in Resources */,
 				9087D36D1FA2460C00425A55 /* Main.storyboard in Resources */,

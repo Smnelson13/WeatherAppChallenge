@@ -18,6 +18,8 @@
 		9087D3981FA246E300425A55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087D3971FA246E300425A55 /* Constants.swift */; };
 		90BA2B851FA2550F00A7CF56 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B841FA2550F00A7CF56 /* Weather.swift */; };
 		90BA2B871FA2590900A7CF56 /* SKYIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B861FA2590900A7CF56 /* SKYIconView.swift */; };
+		90BA2B8A1FA2641C00A7CF56 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B891FA2641C00A7CF56 /* SearchViewController.swift */; };
+		90BA2B8C1FA2652400A7CF56 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BA2B8B1FA2652400A7CF56 /* CircularTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		9087D3971FA246E300425A55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		90BA2B841FA2550F00A7CF56 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		90BA2B861FA2590900A7CF56 /* SKYIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKYIconView.swift; sourceTree = "<group>"; };
+		90BA2B891FA2641C00A7CF56 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		90BA2B8B1FA2652400A7CF56 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				9087D3691FA2460C00425A55 /* ViewController.swift */,
 				90BA2B841FA2550F00A7CF56 /* Weather.swift */,
 				9087D36B1FA2460C00425A55 /* Main.storyboard */,
+				90BA2B891FA2641C00A7CF56 /* SearchViewController.swift */,
 				9087D3951FA246BF00425A55 /* APIController.swift */,
 				90BA2B881FA2592900A7CF56 /* SupportingFiles */,
 				9087D36E1FA2460C00425A55 /* Assets.xcassets */,
@@ -139,6 +144,7 @@
 		90BA2B881FA2592900A7CF56 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				90BA2B8B1FA2652400A7CF56 /* CircularTransition.swift */,
 				90BA2B861FA2590900A7CF56 /* SKYIconView.swift */,
 				9087D3971FA246E300425A55 /* Constants.swift */,
 			);
@@ -280,7 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9087D36A1FA2460C00425A55 /* ViewController.swift in Sources */,
+				90BA2B8A1FA2641C00A7CF56 /* SearchViewController.swift in Sources */,
 				9087D3681FA2460C00425A55 /* AppDelegate.swift in Sources */,
+				90BA2B8C1FA2652400A7CF56 /* CircularTransition.swift in Sources */,
 				9087D3981FA246E300425A55 /* Constants.swift in Sources */,
 				90BA2B871FA2590900A7CF56 /* SKYIconView.swift in Sources */,
 				9087D3961FA246BF00425A55 /* APIController.swift in Sources */,

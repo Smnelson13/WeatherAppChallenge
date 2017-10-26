@@ -9,8 +9,11 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, APIControllerDelegate, CLLocationManagerDelegate
+
+
+class ViewController: UIViewController, APIControllerDelegate, CLLocationManagerDelegate, UIViewControllerTransitioningDelegate
 {
+  @IBOutlet weak var searchButton: UIButton!
   @IBOutlet weak var temperatureLabel: UILabel!
   @IBOutlet weak var skyconView: SKYIconView!
   @IBOutlet weak var summaryLabel: UILabel!
@@ -19,6 +22,8 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   
   var apiController: APIController!
   let locationManager = CLLocationManager()
+  let transition = CircularTransition()
+  
   
   func didRecieveResults(_ results: [String : Any])
   {
@@ -33,7 +38,19 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
     }
   }
   
-
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  {
+    if (segue.identifier == "SearchSegue")
+    {
+      let searchVC = segue.destination as! SearchViewController
+      searchVC.transitioningDelegate = self
+      searchVC.modalPresentationStyle = .custom
+      searchVC.delegate = self
+      
+    }
+    
+  }
+  
   override func viewDidLoad()
   {
     super.viewDidLoad()
@@ -84,7 +101,48 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
     }
   }
   
+ 
   
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
+  {
+    transition.transitionMode = .present
+    transition.startingPoint = searchButton.center
+    transition.circleColor = searchButton.backgroundColor!
+    
+    return transition
+  }
+  
+  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
+  {
+    transition.transitionMode = .dismiss
+    transition.startingPoint = searchButton.center
+    transition.circleColor = searchButton.backgroundColor!
+    
+    return transition
+  }
 
 }
+
+
+extension ViewController: SearchViewControllerDelegate
+{
+  func searchViewControllerDidRecieveLocation(coordinate: CLLocationCoordinate2D)
+  {
+    dismiss(animated: true) {
+      self.apiController.searchDarkSky(coordinate: coordinate)
+    }
+  }
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
 

@@ -14,6 +14,8 @@
 		9087D3721FA2460C00425A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9087D3701FA2460C00425A55 /* LaunchScreen.storyboard */; };
 		9087D37D1FA2460C00425A55 /* WeatherAppChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087D37C1FA2460C00425A55 /* WeatherAppChallengeTests.swift */; };
 		9087D3881FA2460C00425A55 /* WeatherAppChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087D3871FA2460C00425A55 /* WeatherAppChallengeUITests.swift */; };
+		9087D3961FA246BF00425A55 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087D3951FA246BF00425A55 /* APIController.swift */; };
+		9087D3981FA246E300425A55 /* SupportingFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9087D3971FA246E300425A55 /* SupportingFiles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9087D3831FA2460C00425A55 /* WeatherAppChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9087D3871FA2460C00425A55 /* WeatherAppChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppChallengeUITests.swift; sourceTree = "<group>"; };
 		9087D3891FA2460C00425A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9087D3951FA246BF00425A55 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		9087D3971FA246E300425A55 /* SupportingFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingFiles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				9087D3671FA2460C00425A55 /* AppDelegate.swift */,
 				9087D3691FA2460C00425A55 /* ViewController.swift */,
 				9087D36B1FA2460C00425A55 /* Main.storyboard */,
+				9087D3951FA246BF00425A55 /* APIController.swift */,
+				9087D3971FA246E300425A55 /* SupportingFiles.swift */,
 				9087D36E1FA2460C00425A55 /* Assets.xcassets */,
 				9087D3701FA2460C00425A55 /* LaunchScreen.storyboard */,
 				9087D3731FA2460C00425A55 /* Info.plist */,
@@ -261,6 +267,8 @@
 			files = (
 				9087D36A1FA2460C00425A55 /* ViewController.swift in Sources */,
 				9087D3681FA2460C00425A55 /* AppDelegate.swift in Sources */,
+				9087D3981FA246E300425A55 /* SupportingFiles.swift in Sources */,
+				9087D3961FA246BF00425A55 /* APIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

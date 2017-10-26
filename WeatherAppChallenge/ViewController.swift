@@ -102,7 +102,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   }
   
  
-  
+  //Animation handling
   func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning?
   {
     transition.transitionMode = .present
@@ -111,7 +111,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
     
     return transition
   }
-  
+  // Custom animation handle
   func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning?
   {
     transition.transitionMode = .dismiss
@@ -124,6 +124,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
 }
 
 
+// Handles results from searchViewController
 extension ViewController: SearchViewControllerDelegate
 {
   func searchViewControllerDidRecieveLocation(coordinate: CLLocationCoordinate2D)
@@ -133,8 +134,9 @@ extension ViewController: SearchViewControllerDelegate
     }
   }
   
-  
 }
+
+
 
 
 

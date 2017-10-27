@@ -27,15 +27,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate
   override func viewDidLoad()
     {
       super.viewDidLoad()
-      view.backgroundColor = customBlue
+      view.backgroundColor = UIColor.white
       searchBar.delegate = self
       searchBar.showsCancelButton = true
       searchBar.barTintColor = customBlue
-      doneButton.setTitleColor(customBlue, for: .normal)
-      doneButton.backgroundColor = UIColor.white
+      doneButton.backgroundColor = customBlue
       doneButton.layer.cornerRadius = 20
       poweredByImage.image = poweredByImage.image!.withRenderingMode(.alwaysTemplate)
-      poweredByImage.tintColor = UIColor.white
+      poweredByImage.tintColor = customBlue
     }
 
     override func didReceiveMemoryWarning()

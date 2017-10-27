@@ -24,7 +24,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   let locationManager = CLLocationManager()
   let transition = CircularTransition()
   
-  
+  // Handles the results from the APIContontroller after it recieves the Weather.
   func didRecieveResults(_ results: [String : Any])
   {
     let currentWeather = Weather(weatherDictionary: results)
@@ -70,7 +70,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
   {
     configureLocationManager()
   }
-  
+  // Checks to see if a user had authorized their location to be accessed.
   func configureLocationManager()
   {
     if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.denied && CLLocationManager.authorizationStatus() != CLAuthorizationStatus.restricted
@@ -83,7 +83,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
       }
     }
   }
-  
+  // Checks to see if the app id authorized to use location services
   func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
   {
     if status == CLAuthorizationStatus.authorizedWhenInUse
@@ -91,7 +91,7 @@ class ViewController: UIViewController, APIControllerDelegate, CLLocationManager
       locationManager.startUpdatingLocation()
     }
   }
-  
+  // Gets the location of the user then passes the results to the apicontroller 
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
   {
     locationManager.stopUpdatingLocation()

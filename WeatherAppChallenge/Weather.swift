@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// The Weather objects properties
 class Weather
 {
   

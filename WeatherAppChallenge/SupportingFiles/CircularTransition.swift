@@ -31,6 +31,7 @@ class CircularTransition: NSObject {
   
 }
 
+//Handles the apps animation from the search button to the next view.
 extension CircularTransition:UIViewControllerAnimatedTransitioning {
   func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
     return duration

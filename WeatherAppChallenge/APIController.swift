@@ -24,6 +24,7 @@ public class APIController
     self.delegate = delegate
   }
 
+  //Responsible for obtaining Weather news form the API
   func searchDarkSky(coordinate: CLLocationCoordinate2D)
   {
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -60,7 +61,7 @@ public class APIController
     
   }
   
-  
+  // parses JSON data from the API
   func parseJSON(_ data: Data) -> [String: Any]?
   {
     do
@@ -85,33 +86,3 @@ public class APIController
   
 }
 
-
-/* //http://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=b1b15e88fa797225412429c1c50c122a1
- func getWeatherData(coordinate: CLLocationCoordinate2D)
- {
- UIApplication.shared.isNetworkActivityIndicatorVisible = true
- let url = URL(string: "http://samples.openweathermap.org/data/2.5/weather?lat=\(coordinate.latitude)&lon=\(coordinate.longitude)&appid=\(APIKey)")!
- let session = URLSession.shared
- 
- let task = session.dataTask(with: url, completionHandler: { data, response, error -> Void in
- 
- print("Task completed")
- if let error = error
- {
- print(error.localizedDescription)
- }
- else
- {
- if let dictionary = self.parseJSON(data!)
- {
- if let results = dictionary["currently"] as? [String: Any]
- {
- UIApplication.shared.isNetworkActivityIndicatorVisible = false
- self.delegate.didRecieveResults(results)
- }
- }
- }
- })
- 
- task.resume()
- }*/
